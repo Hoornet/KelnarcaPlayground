@@ -15,5 +15,13 @@
     <string name="saldo">Total</string>
     <string name="vino">Vine</string>
     <string name="vinoBelo">White vine</string>
-
+    <string name="title_activity_grid_favourites">GridFavouritesActivity</string>
+    <string name="title_activity_drink_list">DrinkListActivity</string>
+    <string name="title_activity_groups">GroupsActivity</string>
+    <string name="title_activity_multy">MultyActivity</string>
+    <string name="cancel">Prekliči</string>
+    <string name="ok">OK</string>
+    <string name="title_activity_grid">GridActivity</string>
+    <string name="message_left">Levo sporočilo</string>
+    <string name="message_right">Desno sporočilo</string>
 </resources>

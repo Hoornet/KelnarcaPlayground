@@ -1,5 +1,5 @@
 <resources>
-
+    <string name="app_name">Kelnarca2</string>
     <string name="action_settings">Nastavitve</string>
     <string name="drugo">Drugo</string>
     <string name="groups">SKupine</string>
@@ -13,5 +13,15 @@
     <string name="pivoSvetlo">Svetlo pivo</string>
     <string name="saldo">Saldo</string>
     <string name="vino">Vino</string>
+    <string name="vinoBelo">Belo vino</string>
+   	<string name="title_activity_grid_favourites">GridFavouritesActivity</string>
+    <string name="title_activity_drink_list">DrinkListActivity</string>
+    <string name="title_activity_groups">GroupsActivity</string>
+    <string name="title_activity_multy">MultyActivity</string>
+    <string name="cancel">Prekliči</string>
+    <string name="ok">OK</string>
+    <string name="title_activity_grid">GridActivity</string>
+    <string name="message_left">Levo sporočilo</string>
+    <string name="message_right">Desno sporočilo</string>
 
 </resources>
