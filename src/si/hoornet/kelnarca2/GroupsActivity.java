@@ -32,7 +32,6 @@ public class GroupsActivity  extends ListActivity {
 
 		@Override
 		public String toString() {
-			// TODO Auto-generated method stub
 			return this.visibleText.toString();
 		}		
 	}
@@ -43,7 +42,7 @@ public class GroupsActivity  extends ListActivity {
 		Group group = new Group(0, "Hrana");		
 		groups.add(group);
 		
-		groups.add(new Group(1, "PijaËa"));
+		groups.add(new Group(1, "Pijaƒça"));
 		groups.add(new Group(2, "Cigarete"));
 		groups.add(new Group(3, "Drugo"));		
 	}
@@ -72,7 +71,6 @@ public class GroupsActivity  extends ListActivity {
 	 */
 	@Override
 	public long getSelectedItemId() {
-		// TODO Auto-generated method stub
 		return super.getSelectedItemId();
 	}
 
@@ -83,7 +81,6 @@ public class GroupsActivity  extends ListActivity {
 	 */
 	@Override
 	public int getSelectedItemPosition() {
-		// TODO Auto-generated method stub
 		return super.getSelectedItemPosition();
 	}
 
@@ -94,7 +91,6 @@ public class GroupsActivity  extends ListActivity {
 	 */
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
-		// TODO Auto-generated method stub
 		super.onListItemClick(l, v, position, id);
 	}
 

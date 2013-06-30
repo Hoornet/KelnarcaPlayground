@@ -38,7 +38,6 @@ public class Grupa {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return this.visibleText.toString();
 	}
 
@@ -47,7 +46,7 @@ public class Grupa {
 		Grupa group = new Grupa(0, "Hrana");
 		groups.add(group);
 
-		groups.add(new Grupa(1, "Pijaèa"));
+		groups.add(new Grupa(1, "Pijaï¿½a"));
 		groups.add(new Grupa(2, "Cigarete"));
 		groups.add(new Grupa(3, "Drugo"));
 	}

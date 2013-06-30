@@ -7,7 +7,7 @@ public class ProdList {
 	int grupa_id;
 
 	public ProdList() {
-		// TODO Auto-generated constructor stub
+
 	}
 	
 	

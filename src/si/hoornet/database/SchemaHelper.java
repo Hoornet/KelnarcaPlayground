@@ -27,7 +27,6 @@ public class SchemaHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		// TODO Auto-generated method stub
 
 		// CREATE GRUPA TABLE
 		db.execSQL("CREATE TABLE " + GrupaTable.TABLE_NAME + " ("
@@ -144,7 +143,7 @@ public class SchemaHelper extends SQLiteOpenHelper {
 		// That's how you do it when you receive data from the net
 		ContentValues values = new ContentValues();
 		values.put(GrupaTable.ID, 1);
-		values.put(GrupaTable.NAME, "Pijaèa");
+		values.put(GrupaTable.NAME, "Pijaï¿½a");
 		//db.insert(TABLE, null, values);
 		db.insertWithOnConflict(GrupaTable.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_IGNORE);
 		
@@ -164,21 +163,21 @@ public class SchemaHelper extends SQLiteOpenHelper {
 		ContentValues values = new ContentValues();
 		values.put(ProdListTable.ID, 1);
 		values.put(ProdListTable.GRUPA_ID, 1);
-		values.put(ProdListTable.NAME, "Laško Pivo 3dl");
+		values.put(ProdListTable.NAME, "Laï¿½ko Pivo 3dl");
 		//db.insert(TABLE, null, values);
 
 		//		db.insertWithOnConflict(ProdListTable.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_IGNORE);
 		
 		// but for the inside only sample we'll just do it the old way:
-		//Pijaèa sample
-		db.execSQL("insert into PROD_LIST (id, GRUPA_ID, name) values (2, 1, 'Laško pivo 5dm')");
+		//Pijaï¿½a sample
+		db.execSQL("insert into PROD_LIST (id, GRUPA_ID, name) values (2, 1, 'Laï¿½ko pivo 5dm')");
 		db.execSQL("insert into PROD_LIST (id, GRUPA_ID, name) values (3, 1, 'Union pivo 3dl')");
 		db.execSQL("insert into PROD_LIST (id, GRUPA_ID, name) values (4, 1, 'Union pivo 5dl')");
 		db.execSQL("insert into PROD_LIST (id, GRUPA_ID, name) values (5, 1, 'Kratka kava')");
 		
 		// hrana sample
 		db.execSQL("insert into PROD_LIST (id, GRUPA_ID, name) values (1, 2, 'Prebranec')");
-		db.execSQL("insert into PROD_LIST (id, GRUPA_ID, name) values (2, 2, 'Žlikrofi')");
+		db.execSQL("insert into PROD_LIST (id, GRUPA_ID, name) values (2, 2, 'ï¿½likrofi')");
 		db.execSQL("insert into PROD_LIST (id, GRUPA_ID, name) values (3, 2, 'Vege something')");
 		
 		// Cigareti sample
