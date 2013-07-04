@@ -10,12 +10,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-/**
- * @author Hoornet
- * 
- */
 public class SchemaHelper extends SQLiteOpenHelper {
-
+	
 	private static final String DATABASE_NAME = "kelnarca.db";
 
 	// TOGGLE THIS NUMBER FOR UPDATING TABLES AND DATABASE
@@ -27,7 +23,6 @@ public class SchemaHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-
 		// CREATE GRUPA TABLE
 		db.execSQL("CREATE TABLE " + GrupaTable.TABLE_NAME + " ("
 				+ GrupaTable.PKID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -41,21 +36,14 @@ public class SchemaHelper extends SQLiteOpenHelper {
 				+ ProdListTable.NAME + " TEXT);");
 		
 		insertGrupeSampleData(db);
-		insertProdListSampleData(db);
-		
-/*		// CREATE CLASSES MAPPING TABLE
-		db.execSQL("CREATE TABLE " + ClassTable.TABLE_NAME + " ("
-				+ ClassTable.ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-				+ ClassTable.STUDENT_ID + " INTEGER," + ClassTable.COURSE_ID
-				+ " INTEGER);");*/
+		insertProdListSampleData(db);		
 	}
 
 	@Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion,
-    		int newVersion) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.w("LOG_TAG", "Upgrading database from version " 
         + oldVersion + " to " + newVersion + ", which will destroy all old data");
-        // KILL PREVIOUS TABLES IF UPGRADEDfg
+        // KILL PREVIOUS TABLES IF UPGRADED
         db.execSQL("DROP TABLE IF EXISTS " + GrupaTable.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + ProdListTable.TABLE_NAME);
    //     db.execSQL("DROP TABLE IF EXISTS " + ClassTable.TABLE_NAME);
@@ -76,7 +64,7 @@ public class SchemaHelper extends SQLiteOpenHelper {
         		GrupaTable.ID, cv);
         return result;
     }
-    // WRAPPER METHOD FOR ADDING A COURSE
+    // WRAPPER METHOD FOR ADDING A PRODUKT
     public long addProdList(String name, int id) {
         ContentValues cv = new ContentValues();
         cv.put(ProdListTable.NAME, name);
