@@ -22,7 +22,7 @@ public class GridActivity extends Activity {
 	Spinner spinnerGrupe, spinnerMize;
 	ListView lvProdList;
 
-	@Override
+	@Override 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// setContentView(R.layout.activity_grid);
