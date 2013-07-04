@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
  
 public class GroupsActivity  extends ListActivity {
-
+// tesd
 	class Group {
 		
 		int id;
