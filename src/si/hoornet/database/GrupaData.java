@@ -7,34 +7,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class GrupaData {
-	
-
 	// CREATE TABLE [GRUPA]([PKID] [int] IDENTITY(1,1) NOT NULL,  [ID] [int] NOT NULL, [NAME] [varchar](50) NOT NULL 
-	
 	// Skrajšan testni SQL:
-	// create table grupa  PKID int primary key, int id, text name
-			      
-		static final String TAG = "GrupaData";
-		
+	// create table grupa  PKID int primary key, int id, text name			      
+		static final String TAG = "GrupaData";		
 		public static final String DB_NAME = "kelnarca.db";
-		public static final int DB_VERSION  = 1;
-		
+		public static final int DB_VERSION  = 1;		
 		public static final String TABLE = "GRUPA";
 		public static final String C_ID = "id";
 		public static final String C_PKID = "_ID";
-	//	public static final String C_CREATED_AT = "created_at";
 		public static final String C_NAME = "NAME";
-		public static final String C_GRUPA = "GRUPA";
-
-
-
-		
-		
+		public static final String C_GRUPA = "GRUPA";			
 		
 		Context context;
 		DbHelper dbhelper;
-		SQLiteDatabase db;
-		
+		SQLiteDatabase db;		
 		
 		public GrupaData(Context context) {
 			//super();
@@ -43,12 +30,10 @@ public class GrupaData {
 		}
 
 		class DbHelper extends SQLiteOpenHelper {
-
 			// simplify contructor
 			public DbHelper() {
 				super(context, DB_NAME, null, DB_VERSION);
 			}
-
 			
 			// RUN ONCE ONLY !!!
 			@Override
@@ -56,16 +41,11 @@ public class GrupaData {
 				// create table prod_list PKID int primary key, id int , grupa int , name text;
 				String sql = String.format("create table %s " + 
 						"(%s int primary key, %s int, %s text)",
-						TABLE, 
-						C_PKID, C_ID, C_NAME);
-				
+						TABLE, C_PKID, C_ID, C_NAME);				
 				Log.d(TAG, "onCreate with SQL: " + sql);
-				db.execSQL(sql);
-				
+				db.execSQL(sql);				
 				insertSampleDate();  // ker se onCreate izvede samo enkrat je to tudi priložnost za vnos enkratnih sample podatkov
-							
 			}
-
 			
 			// if sistem detects difference between oldversion and newVersion it runs this:
 			@Override
@@ -74,14 +54,12 @@ public class GrupaData {
 				
 				// poor mans version:
 				db.execSQL("drop if exists " + TABLE);
-				onCreate(db);
-				
+				onCreate(db);				
 			}
 			
 			// Sample data for tabel GRUPE
 			public void insertSampleDate() {
-				Log.d(TAG, "insertSampleDate()");
-				
+				Log.d(TAG, "insertSampleDate()");				
 				db = dbhelper.getWritableDatabase();
 				
 				// That's how you do it when you receive data from the net
